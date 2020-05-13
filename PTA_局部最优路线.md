@@ -8,14 +8,7 @@
 输出格式:
 输出全省畅通需要的最低成本。
 
-输入样例:
-	4
-	1 2 1 1
-	1 3 4 0
-	1 4 1 1
-	2 3 3 0
-	2 4 2 1
-	3 4 5 0
+![输入样例]("https://github.com/ZhangEnsure/hello-world/blob/master/img-store/%E6%89%B9%E6%B3%A8%202020-05-13%20173033.png")
 输出样例:
 3
 
