@@ -32,7 +32,7 @@ DS课程组
 4. Look back
 重载运算符注意有无等于号的存在。
 
-```
+```C++
 #include<iostream>
 #include<algorithm>
 #include<functional>
