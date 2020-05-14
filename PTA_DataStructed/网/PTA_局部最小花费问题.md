@@ -16,10 +16,12 @@
 
 ---
 
-Understand the question 聚焦于**“局部”**二字，在开始调用Kruskal之前就应该计算已经修通的路程,不要重复计算。
-Devise a plan 高效的并查集 + Kruskal。
-Carry out 定义一个结构，并在结构的内部重载运算符。
-Look back 重载运算符注意有无等于号的存在。
+1. Understand the question 聚焦于**“局部”**二字，在开始调用Kruskal之前就应该计算已经修通的路程,不要重复计算。
+2. Devise a plan 高效的并查集 + Kruskal。
+3. Carry out 定义一个结构，并在结构的内部重载运算符。
+4. Look back 重载运算符注意有无等于号的存在。
+
+```C++
 #include<iostream>
 #include<algorithm>
 #include<functional>
@@ -104,3 +106,4 @@ int main()
 	cout << Kruskal();
     return 0;
 }
+```
