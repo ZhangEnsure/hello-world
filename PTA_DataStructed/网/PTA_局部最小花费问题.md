@@ -112,6 +112,7 @@ int main()
 //简单写一下排序用到的重载方法
 
 //方法1 直接写一个bool compare(const Load &a,const Load &b)函数
+//注意：sort的第三个参数无括号。
 bool compare(const Load &a,const Load &b)
 {
   return a.cost < b.cost;
@@ -119,6 +120,7 @@ bool compare(const Load &a,const Load &b)
 sort(Load.begin(),Load.end(),compare);
 
 //方法2 写一个仿函数
+//注意：operator()括号勿丢！
 class Solution
 {
     public:
