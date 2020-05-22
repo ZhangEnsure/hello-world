@@ -107,3 +107,25 @@ int main()
     return 0;
 }
 ```
+
+```cpp
+//简单写一下排序用到的重载方法
+
+//方法1 直接写一个bool compare(const Load &a,const Load &b)函数
+bool compare(const Load &a,const Load &b)
+{
+  return a.cost < b.cost;
+}
+sort(Load.begin(),Load.end(),compare);
+
+//方法2 写一个仿函数
+class Solution
+{
+    public:
+    bool operator()(Load const &a, Load const &b) const
+    {
+        return a.cost < b.cost;
+    }
+};
+sort(Load1.begin(), Load1.end(), Solution());
+```
