@@ -5,6 +5,11 @@
 1. 声明一个DataGridViewRow的对象row。
 2. 为row对象赋值并取得所要的结果。
 ```C#
-row = datagridview.CurrentRow;
-string text = row.Cells[1].Value.ToString();//获取所选行的第二列的内容
+//增加一个判定
+if(datagridview.CurreentRow.Index > 0)//下标从0开始，证明选中某一行
+{
+    DataGridViewRow row = datagridview.CurrentRow;
+    string text = row.Cells[1].Value.ToString();//获取所选行的第二列的内容
+}
+
 ```
