@@ -85,9 +85,37 @@ total=$?
 echo $total
  ```
  
+ 6. 例5，利用Shell编程，实现1-10的数字累加求和
+ ```bash
+ #! /bin/bash
+ #等于号两边不能有空格
+sum=0
+for i in $(seq 10)
+do
+	# 这是(())表达式
+	sum=$(($sum+$i))
+done
+echo "1到10相加的结果为：$sum"
+ ```
  
- 
- 
+ 7. 例6，打印9*9乘法表
+ ```bash
+ #! /bin/bash
+#打印99乘法表
+row=1
+while [ $row -le 9 ]
+    do
+       colume=1
+       while [ $colume -le $row ]
+          do
+            echo -n "$row*$colume=$((row*colume)) "
+            colume=$(expr $colume + 1)
+          done
+       echo
+       ((row=$row+1))
+done
+
+ ```
  
  
  
