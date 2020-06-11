@@ -47,3 +47,26 @@ if(table != null)
     this.comboBox1.ValueMember = "校招编号";//对应的值
 }
 ```
+3. 如何获取组合框绑定之后被选择的数据项
+```C#
+//方式1
+DataRowView drv = (DataRowView)comboBox1.SelectedItem;//Point!易错点！
+string comno = drv.Row["comno"].ToString();//Point!易错点！
+//方式2
+string comno = Convert.ToString(this.combobox1.SelectValue);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
