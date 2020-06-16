@@ -63,6 +63,109 @@ output:
 6
 ```
 
+题目二的测试数据：
+
+1. 测试用例1
+```Java
+Node node1 = new Node(1,new ArrayList());
+Node node2 = new Node(2,new ArrayList());
+Node node3 = new Node(3,new ArrayList());
+Node node4 = new Node(4,new ArrayList());
+node1.neighbors.add(node2);
+node1.neighbors.add(node4);
+node2.neighbors.add(node1);
+node2.neighbors.add(node3);
+node3.neighbors.add(node2);
+node3.neighbors.add(node4);
+node4.neighbors.add(node1);
+node4.neighbors.add(node3);
+```
+
+2. 测试用例2
+```Java
+Node node1 = new Node(1,new ArrayList());
+Node node2 = new Node(2,new ArrayList());
+Node node3 = new Node(3,new ArrayList());
+Node node4 = new Node(4,new ArrayList());
+Node node5 = new Node(5,new ArrayList());
+node1.neighbors.add(node2);
+node1.neighbors.add(node4);
+node2.neighbors.add(node1);
+node2.neighbors.add(node3);
+node3.neighbors.add(node2);
+node3.neighbors.add(node4);
+node3.neighbors.add(node5);
+node4.neighbors.add(node1);
+node4.neighbors.add(node3);
+node4.neighbors.add(node5);
+node5.neighbors.add(node3);
+node5.neighbors.add(node4);
+```
+
+3. 测试用例3
+```Java
+Node node1 = new Node(1,new ArrayList());
+Node node2 = new Node(2,new ArrayList());
+Node node3 = new Node(3,new ArrayList());
+Node node4 = new Node(4,new ArrayList());
+Node node5 = new Node(5,new ArrayList());
+node1.neighbors.add(node2);
+node1.neighbors.add(node4);
+node1.neighbors.add(node5);
+node2.neighbors.add(node1);
+node2.neighbors.add(node3);
+node3.neighbors.add(node2);
+node3.neighbors.add(node4);
+node3.neighbors.add(node5);
+node4.neighbors.add(node1);
+node4.neighbors.add(node3);
+node4.neighbors.add(node5);
+node5.neighbors.add(node3);
+node5.neighbors.add(node4);
+node5.neighbors.add(node1);
+```
+
+4. 测试用例4
+```Java
+Node node1 = new Node(1,new ArrayList());
+Node node2 = new Node(2,new ArrayList());
+Node node3 = new Node(3,new ArrayList());
+Node node4 = new Node(4,new ArrayList());
+Node node5 = new Node(5,new ArrayList());
+Node node6 = new Node(6,new ArrayList());
+node1.neighbors.add(node2);
+node1.neighbors.add(node4);
+node1.neighbors.add(node5);
+node1.neighbors.add(node6);
+node2.neighbors.add(node1);
+node2.neighbors.add(node3);
+node3.neighbors.add(node2);
+node3.neighbors.add(node4);
+node3.neighbors.add(node5);
+node4.neighbors.add(node1);
+node4.neighbors.add(node3);
+node4.neighbors.add(node5);
+node5.neighbors.add(node3);
+node5.neighbors.add(node4);
+node5.neighbors.add(node1);
+node6.neighbors.add(node1);
+```
+
+5. 测试用例5
+```Java
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
