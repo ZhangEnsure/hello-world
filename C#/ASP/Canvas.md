@@ -1,0 +1,2 @@
+在canvas中放置图形时的位置不是由HorizontalAlignment和VerticalAligment决定的，
+而是Canvas.Left和Canvas.Top决定的（数值，精确定位）
