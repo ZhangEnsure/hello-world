@@ -14,3 +14,37 @@ private void Rect_MouseEnter(object sender, MouseEventArgs e)
     rect.Fill = Brushes.Red;
 }
 ```
+
+鼠标退出图形之后
+```C#
+private void Rect_MouseLeave(object sender, MouseEventArgs e)
+{
+    Mouse.OverrideCursor = Cursors.Arrow;
+    Rectangle rect = e.Source as Rectangle;
+    RectTag rectTag = rect.Tag as RectTag;
+    rect.Fill = rectTag.RectFillBrush;
+    rect.Opacity = rectTag.RectOpacity;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
