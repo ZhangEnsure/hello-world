@@ -26,7 +26,24 @@ private void Rect_MouseLeave(object sender, MouseEventArgs e)
     rect.Opacity = rectTag.RectOpacity;
 }
 ```
-
+对于我自己而言，FrameworkElement类型类似var一样，既然是在画布中声明的事件方法，根据路由机制，在画布中的子元素也同样的注册了
+相同的事件，在使用的过程中也就要写通用的代码进行操作。</br> **注意**：
+sender就是注册时的控件，而e.OriginalSource或e.Source是实际触发时的控件。
+```C#
+private void ParentCanvas_MouseMove(object sender, MouseEventArgs e)
+{
+    FrameworkElement senderElement = sender as FrameworkElement;
+    FrameworkElement sourceElement = e.OriginalSource as FrameworkElement;
+    FrameworkElement sourceObject = e.Source as FrameworkElement;
+    Rectangle rect = e.Source as Rectangle;
+    Point p = Mouse.GetPosition(null);//既然是null，则是相对于窗口最左上角的位置进行计算
+    ellipse.Width = p.X;
+    ellipse.Height = p.Y;
+    statusTextBlock.Text = string.Format(
+        "发送事件的对象：{0}\t事件源：{1}\t引发事件的对象：{2}\n鼠标位置：x={3}, y={4}",
+        senderElement.Name, sourceElement.Name, sourceObject.Name, p.X, p.Y);
+}
+```
 
 
 
