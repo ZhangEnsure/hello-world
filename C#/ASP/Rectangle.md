@@ -10,7 +10,7 @@ private void Rect_MouseEnter(object sender, MouseEventArgs e)
     //利用RectTag对象保留了原始矩形的填充色和不透明度
     rectTag.RectFillBrush = rect.Fill;
     rectTag.RectOpacity = rect.Opacity;//指的是不透明度
-    rect.Tag = rectTag;//
+    rect.Tag = rectTag;//有关于此元素的自定义信息的任意对象值
     rect.Fill = Brushes.Red;
 }
 ```
