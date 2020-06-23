@@ -1,7 +1,15 @@
 ## 属性
 1. 在界面中对Rectangle图形进行操作、做出各种变换，最后想操作结束后将原图形回复原型。
 可以设计一个RectTag类型的对象rectTag，此对象保存对矩形操作前的图形原始信息。代码示例如下：
+2. 注意，需要提前定义一个RectTag类。
 ```C#
+//定义一个RectTag类
+public class RectTag
+{
+    public System.Windows.Media.Brush RectFillBrush { get; set; }
+    public double RectOpacity { get; set; }
+}
+
 private void Rect_MouseEnter(object sender, MouseEventArgs e)
 {
     Mouse.OverrideCursor = Cursors.Hand;
